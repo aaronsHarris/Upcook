@@ -1,9 +1,5 @@
 # Upcook
 
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
-
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
@@ -23,108 +19,101 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+**Upcook** is a application to quickly find cooking knowledge and recipes without the fluff that is so common with popular recipe apps. Get to the point and get cooking!
 
 
 <br>
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+- Build Interactive React front end
+- use Ruby on Rails to create a RESTFUL API 
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+- Have full CRUD on front end and back end
+
+- Utilize React Router, for client-side routing.
+
+- User Authenitaction
+
+- At least 3 associating Tables for API
+
+- Styled responvisily
+
+
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
+- The user will easily find recipes and cooking knowledge
+- User will be able to sign in and create, edit & delete blogs and recipes
+- Create intuitive UI
+- use creative css transitions
 - _etc._
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _Create react app_ |
+|   React Router   | _React router dom_ |
+| Framer Motion    | _NPM package for animations_ |
+|     Ruby      | _OOP Backend langauge_ |
+|  Rails  | _Backend Framework_ |
 
 <br>
 
 ### Client (Front End)
 
-#### Wireframes
+#### Wireframe
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+![Figma](https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817432/upcook/Screen_Shot_2021-11-01_at_8.35.06_PM_ba8y7p.png)
 
-![Dummy Link](url)
 
-- Desktop Landing
 
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![Component Tree Sample](https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817504/upcook/Screen_Shot_2021-11-01_at_8.44.50_PM_uxkmxo.png)
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
-``` structure
-
+```
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
+|__ Components/
+      |__ Layout
+      |__ Nav
+      |__ Form
+      |__ Input
+|__ Screens/
+      |__ Home
+      |__ SignIn
+      |__ SignUp
+      |__ Recipes
+      |__ Blog
 |__ services/
 
 ```
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Wireframe    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Component Hierarchy |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| ERD Model |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Readme |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Project Approval |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Backend CRUD |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Setup Folder structure |    H     |     1 hrs      |     1 hrs     |     TBD     |
+| Component Hierarchy |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+
 
 <br>
 
@@ -132,17 +121,20 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+![Draw.io](https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817441/upcook/Screen_Shot_2021-11-01_at_8.30.28_PM_bi4uwt.png)
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+
+
 <br>
 
 ***
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
-
+- suggest recipes based on blog
+- sort blog categories
+- add roles for users
+- 
 ***
 
 ## Code Showcase
