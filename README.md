@@ -49,7 +49,8 @@
 - User will be able to sign in and create, edit & delete blogs and recipes
 - Create intuitive UI
 - use creative css transitions
-- _etc._
+- Learn something new about react
+- Understand core concepts of ruby on rails
 
 <br>
 
@@ -109,9 +110,17 @@ src
 | Readme |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | Project Approval |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | Backend CRUD |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Setup Folder structure |    H     |     1 hrs      |     1 hrs     |     TBD     |
-| Component Hierarchy |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Setup React Folder structure |    H     |     1 hrs      |     1 hrs     |     TBD     |
+| Routes |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Front end CRUD |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Navbar |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| basic funtionality |    L     |     3 hrs      |     1 hrs     |     TBD     |
+| Forms |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| search bar |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Full styling |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Debugging |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Post MVP |    L     |     3 hrs      |     1 hrs     |     TBD     |
+| TOTAL        40       |          |     6 hrs      |     3 hrs     |     TBD     |
 
 
 
@@ -134,7 +143,7 @@ src
 - suggest recipes based on blog
 - sort blog categories
 - add roles for users
-- 
+- add videos
 ***
 
 ## Code Showcase
