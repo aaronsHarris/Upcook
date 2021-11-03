@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :update, :destroy]
-
+  before_action :set_blog, only: :show
+  before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :authorize_request, only: [:update, :destroy]
   # GET /blogs
   def index
     @blogs = Blog.all
@@ -16,7 +17,7 @@ class BlogsController < ApplicationController
   # POST /blogs
   def create
     @blog = Blog.new(blog_params)
-
+    @blog.user = current_user
     if @blog.save
       render json: @blog, status: :created, location: @blog
     else
@@ -42,6 +43,10 @@ class BlogsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
       @blog = Blog.find(params[:id])
+    end
+
+    def set_user_blog
+      @blog = @current_user.blogs.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

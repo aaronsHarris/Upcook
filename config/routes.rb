@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   resources :blogs
   resources :directions
   resources :ingredients
-  resources :users
   resources :recipes
+  resources :users, only: :create
+  post '/ingredients/:ingredient_id/recipes/:id', to: 'recipes#add_ingredient'
+  post '/directions/:direction_id/recipes/:id', to: 'recipes#add_direction'
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
 

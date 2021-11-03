@@ -1,5 +1,7 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show, :update, :destroy]
+  before_action :set_recipe, only: :show
+  before_action :authorize_request, only: [:create, :update, :destroy]
+  before_action :set_user_recipe, only: [:update, :destroy]
 
   # GET /recipes
   def index
@@ -10,13 +12,13 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1
   def show
-    render json: @recipe
+    render json: @recipe, include: [:ingredients, :directions]
   end
 
   # POST /recipes
   def create
     @recipe = Recipe.new(recipe_params)
-
+    @recipe.user = current_user
     if @recipe.save
       render json: @recipe, status: :created, location: @recipe
     else
@@ -38,10 +40,31 @@ class RecipesController < ApplicationController
     @recipe.destroy
   end
 
+  def add_ingredient
+    @ingredient = Ingredient.find(params[:ingredient_id])
+    @recipe = Recipe.find(params[:id])
+
+    @recipe.ingredients << @ingredient
+
+    render json: @recipe, include: :ingredients
+  end
+
+  def add_direction
+    @direction = Direction.find(params[:direction_id])
+    @recipe = Recipe.find(params[:id])
+
+    @recipe.directions << @direction
+
+    rend json: @recipe, include: :directions
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
       @recipe = Recipe.find(params[:id])
+    end
+    
+    def set_user_recipe
+      @recipe = @current_user.recipes.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
