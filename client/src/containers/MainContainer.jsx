@@ -25,7 +25,7 @@ const MainContainer = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       const recipeList = await getAllRecipes();
-      setRecipes(recipeList);
+        setRecipes(recipeList);
     };
     fetchRecipes();
   }, []);
@@ -75,7 +75,7 @@ const MainContainer = () => {
         <RecipeDetail recipes={recipes} handleRecipeUpdate={handleRecipeUpdate} />
       </Route>
       <Route path="/recipes">
-        <Recipes />
+              <Recipes recipes={recipes} ingredients={ingredients} directions={directions}/>
       </Route>
     </Switch>
   );
