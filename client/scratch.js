@@ -1,4 +1,4 @@
-<div>
+{/* <div>
     <nav>
       <div className="navbar">
       {currentUser ? (
@@ -17,4 +17,4 @@
       </div>
       </nav>
       {children}
-      </div>
+      </div> */}

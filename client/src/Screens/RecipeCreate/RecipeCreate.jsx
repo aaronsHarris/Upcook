@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const RecipeCreate = (props) => {
-  const [recipeFormData, setRecipeFormData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     time: "",
     difficulty: "",
@@ -11,13 +11,13 @@ const RecipeCreate = (props) => {
     directions: []
     
   });
-  const { name, time, difficulty, description, image_url, ingredients, directions } = recipeFormData;
+  const { name, time, difficulty, description, image_url, ingredients, directions } = formData;
   const { handleRecipeCreate } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setRecipeFormData({
-      ...recipeFormData,
+    setFormData({
+      ...formData,
         [name]: value,
     });
   };
@@ -29,7 +29,7 @@ const RecipeCreate = (props) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          handleRecipeCreate(recipeFormData);
+          handleRecipeCreate(formData);
         }}
       >
         <h1>Create Food</h1>
