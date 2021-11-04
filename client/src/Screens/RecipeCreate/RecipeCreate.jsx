@@ -7,10 +7,11 @@ const RecipeCreate = (props) => {
     difficulty: "",
     description: "",
     image_url: "",
-    ingredients: []
+    ingredients: [],
+    directions: []
     
   });
-  const { name, time, difficulty, description, image_url } = recipeFormData;
+  const { name, time, difficulty, description, image_url, ingredients, directions } = recipeFormData;
   const { handleRecipeCreate } = props;
 
   const handleChange = (e) => {
@@ -51,6 +52,14 @@ const RecipeCreate = (props) => {
         <div>
           image
           <input type="text" name="image_url" value={image_url} onChange={handleChange} />
+        </div>
+        <div>
+          ingredients
+          <input type="text" name="ingredients" value={ingredients} onChange={handleChange} />
+        </div>
+        <div>
+          directions
+          <input type="text" name="directions" value={directions} onChange={handleChange} />
         </div>
         <br />
         <button>Submit</button>

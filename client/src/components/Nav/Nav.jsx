@@ -1,29 +1,31 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import './Nav.css'
+import * as FaIcons from 'react-icons/fa'
+import * as AiIcons from 'react-icons/ai'
 
 const Nav = (props) => {
-  const {children, currentUser, handleLogout } = props;
+  // const {children, currentUser, handleLogout } = props;
+  const [sidebar, setSidebar] = useState(false)
+
+  const showSidebar = () => setSidebar(!sidebar)
   return (
-    <div>
-    <nav>
-      <div className="navbar">
-      {currentUser ? (
-          <div>
-            <p>{currentUser.username}</p>
-            <button onClick={handleLogout}>Logout</button>
-          </div>
-        ) : (
-          <div></div>
-        )}
-        <Link to='/'>Home</Link>
-        <Link to='/recipes'>Recipes</Link>
-        <Link to='/learn'>Learn</Link>
-        <Link to='/signin'>Sign in</Link>
-        <Link to='/signup'>Sign Up</Link>
-      </div>
+    <>
+    <div className="navbar">
+      <Link to='/'>
+          <FaIcons.FaBars onClick={showSidebar}/>
+      </Link>
+    </div>
+    <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+        <ul className='nav-menu-items'>
+          <li className="navbar-toggle">
+            <Link to='#'>
+              <AiIcons.AiOutlineClose />
+            </Link>
+          </li>
+      </ul>
       </nav>
-      {children}
-      </div>
+      </>
   );
 };
 

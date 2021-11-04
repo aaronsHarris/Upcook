@@ -16,7 +16,7 @@ User.destroy_all
 puts "#{User.count} users created"
 
 
-   @pbj = Recipe.create!(name: 'pbj', time: '5 mins', difficulty: 'very easy', description: 'this food is good', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037541/upcook/pbj_klyut1.jpg',  user: @admin)
+   @pbj = Recipe.create!(name: 'pbj', time: '5 mins', difficulty: 'very easy', description: 'this food is good', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037541/upcook/pbj_klyut1.jpg', user: @admin)
 
    @eggs = Recipe.create!(name: 'scrambled eggs', time: '5 mins', difficulty: 'easy', description: 'these are eggs', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037735/upcook/scrambled-eggs-1_plvtz5.jpg',  user: @admin)
 
@@ -24,28 +24,28 @@ puts "#{User.count} users created"
 
 puts "#{Recipe.count} recipes created"
 
-Ingredient.create!(name: '2 slices of bread', recipe: @pbj)
-Ingredient.create!(name: '1oz peanut butter', recipe: @pbj)
-Ingredient.create!(name: '1oz strawberry jelly', recipe: @pbj)
+# Ingredient.create!(name: '2 slices of bread', recipe: @pbj)
+# Ingredient.create!(name: '1oz peanut butter', recipe: @pbj)
+# Ingredient.create!(name: '1oz strawberry jelly', recipe: @pbj)
 
-Ingredient.create!(name: '2 whole eggs', recipe: @eggs)
-Ingredient.create!(name: '2tbsp butter', recipe: @eggs)
+# Ingredient.create!(name: '2 whole eggs', recipe: @eggs)
+# Ingredient.create!(name: '2tbsp butter', recipe: @eggs)
 
-Ingredient.create!(name: '1tbsp neutral oil', recipe: @tuna)
-Ingredient.create!(name: '1lb Sushi Grade Tuna', recipe: @tuna)
-Ingredient.create!(name: '1/2c butcher ground peppercors', recipe: @tuna)
-Ingredient.create!(name: '1/2c seseame seeds', recipe: @tuna)
-Ingredient.create!(name: '1/2oz soy sauce', recipe: @tuna)
-Ingredient.create!(name: '1/4oz rice wine vinegear', recipe: @tuna)
+# Ingredient.create!(name: '1tbsp neutral oil', recipe: @tuna)
+# Ingredient.create!(name: '1lb Sushi Grade Tuna', recipe: @tuna)
+# Ingredient.create!(name: '1/2c butcher ground peppercors', recipe: @tuna)
+# Ingredient.create!(name: '1/2c seseame seeds', recipe: @tuna)
+# Ingredient.create!(name: '1/2oz soy sauce', recipe: @tuna)
+# Ingredient.create!(name: '1/4oz rice wine vinegear', recipe: @tuna)
 
 puts "#{Ingredient.count} ingredients created"
 
-Direction.create!(content: 'toast bread', recipe: @pbj)
-Direction.create!(content: 'spread peanut butter', recipe: @pbj)
-Direction.create!(content: 'spread jelly', recipe: @pbj)
+# Direction.create!(content: 'toast bread', recipe: @pbj)
+# Direction.create!(content: 'spread peanut butter', recipe: @pbj)
+# Direction.create!(content: 'spread jelly', recipe: @pbj)
 
-Direction.create!(content: 'scramblin!', recipe: @eggs)
+# Direction.create!(content: 'scramblin!', recipe: @eggs)
 
-Direction.create!(content: 'Coat tuna in seseame seeds and peppercorns throughly. Heat your oil in a cast iron skillet to smoking level. Get a good sear on the tuna for about 2-5 minutes or less, depending on the thickness of the tuna. Place on a cooling rack and place in the refridgerator to cool.', recipe: @tuna)
+# Direction.create!(content: 'Coat tuna in seseame seeds and peppercorns throughly. Heat your oil in a cast iron skillet to smoking level. Get a good sear on the tuna for about 2-5 minutes or less, depending on the thickness of the tuna. Place on a cooling rack and place in the refridgerator to cool.', recipe: @tuna)
 
 puts "#{Direction.count} directions created"
