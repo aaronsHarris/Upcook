@@ -12,13 +12,13 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1
   def show
-    render json: @recipe, include: [:ingredients, :directions]
+    render json: @recipe
   end
 
   # POST /recipes
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.user = current_user
+    @recipe.user = @current_user
     if @recipe.save
       render json: @recipe, status: :created, location: @recipe
     else

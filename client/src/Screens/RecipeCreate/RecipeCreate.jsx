@@ -23,29 +23,30 @@ const RecipeCreate = (props) => {
   };
 
   return (
-    <div>
+    <div className="create-container">
       <h1>recipe create</h1>
 
       <form
+        className="recipe-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleRecipeCreate(formData);
         }}
       >
-        <h1>Create Food</h1>
-        <div>
+        
+        <div className="recipe-input">
           Name:
                   <input type="text" name="name"value={name} onChange={handleChange} />
         </div>
-        <div>
+        <div className="recipe-input">
           time:
           <input type="text" name="time"value={time} onChange={handleChange} />
         </div>
-        <div>
+        <div className="recipe-input">
           difficulty
           <input type="text" name="difficulty" value={difficulty} onChange={handleChange} />
         </div>
-        <div>
+        <div className="recipe-input">
           description
           <input type="text" name="description" value={description} onChange={handleChange} />
         </div>

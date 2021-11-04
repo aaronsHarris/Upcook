@@ -49,18 +49,7 @@ const MainContainer = () => {
   const handleRecipeDelete = async (id) => {
     await deleteRecipe(id);
     setRecipes((prevState) => prevState.filter((recipe) => recipe.id !== id));
-  };
-
-  const handleIngredientCreate = async (formData) => {
-    const newIngredient = await postIngredient(formData);
-    setIngredients((prevState) => [...prevState, newIngredient]);
-    // history.push('/recipes');
-  };
-
-  const handleDirectionCreate = async (formData) => {
-    const newDirection = await postDirection(formData);
-    setDirections((prevState) => [...prevState, newDirection]);
-    // history.push('/recipes');
+    history.push('/recipes')
   };
 
   return (
@@ -69,20 +58,19 @@ const MainContainer = () => {
         <RecipeEdit
           recipes={recipes}
           handleRecipeUpdate={handleRecipeUpdate}
-          handleRecipeDelete={handleRecipeDelete}
+          
         />
       </Route>
       <Route path="/recipes/new">
         <RecipeCreate
           handleRecipeCreate={handleRecipeCreate}
-          handleDirectionCreate={handleDirectionCreate}
-          handleIngredientCreate={handleIngredientCreate}
         />
       </Route>
       <Route path="/recipes/:id">
         <RecipeDetail
           recipes={recipes}
           handleRecipeUpdate={handleRecipeUpdate}
+          handleRecipeDelete={handleRecipeDelete}
         />
       </Route>
       <Route path="/recipes">

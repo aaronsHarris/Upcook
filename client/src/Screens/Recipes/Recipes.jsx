@@ -7,6 +7,7 @@ const Recipes = (props) => {
     return (
       <div>
         <h3>Recipes</h3>
+        <Link to="/recipes/new">add</Link>
       <div className="recipeContainer">
       {recipes.map((recipe) => (
         <Link to={`/recipes/${recipe.id}`}>
