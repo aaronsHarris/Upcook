@@ -29,6 +29,7 @@ const MainContainer = () => {
     };
     fetchRecipes();
   }, []);
+    
 
   const handleRecipeCreate = async (formData) => {
     const newRecipe = await postRecipe(formData);
@@ -68,11 +69,11 @@ const MainContainer = () => {
       <Route path="/recipes/:id/edit">
               <RecipeEdit recipes={recipes} handleRecipeUpdate={handleRecipeUpdate} handleRecipeDelete={handleRecipeDelete}/>
       </Route>
-      <Route path="/recipes/new">
-              <RecipeCreate handleRecipeCreate={handleRecipeCreate} handleDirectionCreate={handleDirectionCreate} handleIngredientCreate={handleIngredientCreate }/>
-      </Route>
       <Route path="/recipes/:id">
         <RecipeDetail recipes={recipes} handleRecipeUpdate={handleRecipeUpdate} />
+      </Route>
+      <Route path="/recipes/new">
+              <RecipeCreate handleRecipeCreate={handleRecipeCreate} handleDirectionCreate={handleDirectionCreate} handleIngredientCreate={handleIngredientCreate }/>
       </Route>
       <Route path="/recipes">
               <Recipes recipes={recipes} ingredients={ingredients} directions={directions}/>

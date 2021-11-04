@@ -1,19 +1,24 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import './recipes.css'
 
 const Recipes = (props) => {
-    const {recipes} = props
+    const { recipes } = props;
+    
     return (
-        <div>
-            <h3>Recipes</h3>
-            {recipes.map((recipe) => (
-                <div key={recipe.id}>
-                    <p>{recipe.name}</p>
-                    <img src={recipe.image_url} alt="recipeItem" />
+      <div>
+        <h3>Recipes</h3>
+      <div className="recipeContainer">
+      {recipes.map((recipe) => (
+        <Link to={`/recipes/${recipe.id}`}>
+          <div className="recipeCard" key={recipe.id}>
+            <p>{recipe.name}</p>
+            <img src={recipe.image_url} alt="recipeItem" />
+          </div>
+        </Link>
+      ))}
+            </div>
+            </div>
+  );
+};
 
-                </div>
-            ))}
-        </div>
-    )
-}
-
-export default Recipes
+export default Recipes;

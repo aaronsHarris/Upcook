@@ -1,0 +1,16 @@
+.recipeContainer {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-auto-rows: auto;
+
+  grid-gap: 1rem;
+  margin: 50px;
+}
+
+.recipeCard {
+  border: solid black;
+  height: 500px;
+  width: 500px;
+}
