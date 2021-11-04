@@ -12,7 +12,7 @@ const Recipes = (props) => {
         <Link to={`/recipes/${recipe.id}`}>
           <div className="recipeCard" key={recipe.id}>
             <p>{recipe.name}</p>
-            <img src={recipe.image_url} alt="recipeItem" />
+            <img className="recipeImage" src={recipe.image_url} alt="recipeItem" />
           </div>
         </Link>
       ))}

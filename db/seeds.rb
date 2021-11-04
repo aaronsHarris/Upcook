@@ -16,11 +16,11 @@ User.destroy_all
 puts "#{User.count} users created"
 
 
-   @pbj = Recipe.create!(name: 'pbj', time: '5 mins', difficulty: 'very easy', description: 'this food is good', image_url: 'image.png',  user: @admin)
+   @pbj = Recipe.create!(name: 'pbj', time: '5 mins', difficulty: 'very easy', description: 'this food is good', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037541/upcook/pbj_klyut1.jpg',  user: @admin)
 
-   @eggs = Recipe.create!(name: 'scrambled eggs', time: '5 mins', difficulty: 'easy', description: 'these are eggs', image_url: 'image2.png',  user: @admin)
+   @eggs = Recipe.create!(name: 'scrambled eggs', time: '5 mins', difficulty: 'easy', description: 'these are eggs', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037735/upcook/scrambled-eggs-1_plvtz5.jpg',  user: @admin)
 
-   @tuna = Recipe.create!(name: 'Ahi Tuna', time: '20 mins', difficulty: 'Hard', description: 'Ahi tuna is greate for appetizer or a salad. You can crust the outside with seseame seeds or peppercorns. It is usually served raw in the middle, but feel free to cook to your prefference', image_url: 'image3.png',  user: @admin)
+   @tuna = Recipe.create!(name: 'Ahi Tuna', time: '20 mins', difficulty: 'Hard', description: 'Ahi tuna is greate for appetizer or a salad. You can crust the outside with seseame seeds or peppercorns. It is usually served raw in the middle, but feel free to cook to your prefference', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037733/upcook/Ahi-Tuna-Steaks-square_mbok1m.jpg',  user: @admin)
 
 puts "#{Recipe.count} recipes created"
 

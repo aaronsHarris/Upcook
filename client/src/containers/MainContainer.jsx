@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
-
+import Home from "../Screens/Home/Home";
 import {
   deleteRecipe,
   getAllRecipes,
@@ -91,8 +91,12 @@ const MainContainer = () => {
           ingredients={ingredients}
           directions={directions}
         />
-      </Route>
-    </Switch>
+          </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
+      </Switch>
+      
   );
 };
 

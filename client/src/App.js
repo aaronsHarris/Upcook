@@ -11,6 +11,7 @@ import {
   removeToken,
   verifyUser,
 } from './Services/auth';
+import Home from "./Screens/Home/Home";
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path='/'>
             <MainContainer/>
           </Route>
+          
         </Switch>
       </Nav>
     </div>

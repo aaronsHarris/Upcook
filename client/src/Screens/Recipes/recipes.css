@@ -12,5 +12,9 @@
 .recipeCard {
   border: solid black;
   height: 500px;
-  width: 500px;
+  width: 400px;
+}
+
+.recipeImage {
+  width: 300px;
 }
