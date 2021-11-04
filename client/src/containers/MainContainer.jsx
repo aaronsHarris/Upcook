@@ -25,11 +25,10 @@ const MainContainer = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       const recipeList = await getAllRecipes();
-        setRecipes(recipeList);
+      setRecipes(recipeList);
     };
     fetchRecipes();
   }, []);
-    
 
   const handleRecipeCreate = async (formData) => {
     const newRecipe = await postRecipe(formData);
@@ -67,16 +66,31 @@ const MainContainer = () => {
   return (
     <Switch>
       <Route path="/recipes/:id/edit">
-              <RecipeEdit recipes={recipes} handleRecipeUpdate={handleRecipeUpdate} handleRecipeDelete={handleRecipeDelete}/>
-      </Route>
-      <Route path="/recipes/:id">
-        <RecipeDetail recipes={recipes} handleRecipeUpdate={handleRecipeUpdate} />
+        <RecipeEdit
+          recipes={recipes}
+          handleRecipeUpdate={handleRecipeUpdate}
+          handleRecipeDelete={handleRecipeDelete}
+        />
       </Route>
       <Route path="/recipes/new">
-              <RecipeCreate handleRecipeCreate={handleRecipeCreate} handleDirectionCreate={handleDirectionCreate} handleIngredientCreate={handleIngredientCreate }/>
+        <RecipeCreate
+          handleRecipeCreate={handleRecipeCreate}
+          handleDirectionCreate={handleDirectionCreate}
+          handleIngredientCreate={handleIngredientCreate}
+        />
+      </Route>
+      <Route path="/recipes/:id">
+        <RecipeDetail
+          recipes={recipes}
+          handleRecipeUpdate={handleRecipeUpdate}
+        />
       </Route>
       <Route path="/recipes">
-              <Recipes recipes={recipes} ingredients={ingredients} directions={directions}/>
+        <Recipes
+          recipes={recipes}
+          ingredients={ingredients}
+          directions={directions}
+        />
       </Route>
     </Switch>
   );
