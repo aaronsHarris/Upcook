@@ -7,19 +7,22 @@ import {
   postRecipe,
   putRecipe,
 } from "../Services/recipes";
-
-import { postIngredient } from "../Services/Ingredients";
-import { postDirection } from "../Services/directions";
-
+import {
+  getAllBlogs,
+  getOneBlog,
+  putBlog,
+  deleteBlog,
+} from "../Services/blogs";
 import Recipes from "../Screens/Recipes/Recipes";
 import RecipeCreate from "../Screens/RecipeCreate/RecipeCreate";
 import RecipeEdit from "../Screens/RecipeEdit/RecipeEdit";
 import RecipeDetail from "../Screens/RecipeDetail/RecipeDetail";
 
+
+
 const MainContainer = () => {
   const [recipes, setRecipes] = useState([]);
-  const [ingredients, setIngredients] = useState([]);
-  const [directions, setDirections] = useState([]);
+  const [blogs, setBlogs] = useState([])
   const history = useHistory();
 
   useEffect(() => {
@@ -49,22 +52,47 @@ const MainContainer = () => {
   const handleRecipeDelete = async (id) => {
     await deleteRecipe(id);
     setRecipes((prevState) => prevState.filter((recipe) => recipe.id !== id));
-    history.push('/recipes')
+    history.push("/recipes");
   };
+  
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const blogList = await getAllBlogs();
+      setBlogs(blogList);
+    };
+    fetchBlogs();
+  }, []);
+  
+  const handleBlogCreate = async (blogFormData) => {
+    const newBlog = await postBlog(blogFormData);
+    setRecipes((prevState) => [...prevState, newBlog]);
+    history.push("/blogs");
+  };
+
+  const handleBlogUpdate = async (id, blogFormData) => {
+    const newBlog = await putBlog(id, blogFormData);
+    setBlogs((prevState) =>
+      prevState.map((blog) => {
+        return blog.id === Number(id) ? newBlog : blog;
+      })
+    );
+    history.push("/blogs");
+  };
+
+  const handleBlogDelete = async (id) => {
+    await deleteBlog(id);
+    setBlogs((prevState) => prevState.filter((blog) => blog.id !== id));
+    history.push("/blogs");
+  };
+
 
   return (
     <Switch>
       <Route path="/recipes/:id/edit">
-        <RecipeEdit
-          recipes={recipes}
-          handleRecipeUpdate={handleRecipeUpdate}
-          
-        />
+        <RecipeEdit recipes={recipes} handleRecipeUpdate={handleRecipeUpdate} />
       </Route>
       <Route path="/recipes/new">
-        <RecipeCreate
-          handleRecipeCreate={handleRecipeCreate}
-        />
+        <RecipeCreate handleRecipeCreate={handleRecipeCreate} />
       </Route>
       <Route path="/recipes/:id">
         <RecipeDetail
@@ -74,17 +102,12 @@ const MainContainer = () => {
         />
       </Route>
       <Route path="/recipes">
-        <Recipes
-          recipes={recipes}
-          ingredients={ingredients}
-          directions={directions}
-        />
-          </Route>
-          <Route path='/'>
-            <Home />
-          </Route>
-      </Switch>
-      
+        <Recipes recipes={recipes} />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
   );
 };
 
