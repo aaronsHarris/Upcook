@@ -18,7 +18,7 @@ export const SidebarData = [
     },
     {
         title: 'Learn',
-        path: '/blog',
+        path: '/blogs',
         icon: <FaIcons.FaBookReader />,
         cName: 'nav-text'
     },

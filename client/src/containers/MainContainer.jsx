@@ -10,6 +10,7 @@ import {
 import {
   getAllBlogs,
   getOneBlog,
+  postBlog,
   putBlog,
   deleteBlog,
 } from "../Services/blogs";
@@ -17,12 +18,14 @@ import Recipes from "../Screens/Recipes/Recipes";
 import RecipeCreate from "../Screens/RecipeCreate/RecipeCreate";
 import RecipeEdit from "../Screens/RecipeEdit/RecipeEdit";
 import RecipeDetail from "../Screens/RecipeDetail/RecipeDetail";
-
-
+import Blogs from "../Screens/Blogs/Blogs";
+import BlogEdit from "../Screens/BlogEdit/BlogEdit";
+import BlogCreate from "../Screens/BlogCreate/BlogCreate";
+import BlogDetail from "../Screens/BlogDetail/BlogDetail";
 
 const MainContainer = () => {
   const [recipes, setRecipes] = useState([]);
-  const [blogs, setBlogs] = useState([])
+  const [blogs, setBlogs] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
@@ -54,7 +57,7 @@ const MainContainer = () => {
     setRecipes((prevState) => prevState.filter((recipe) => recipe.id !== id));
     history.push("/recipes");
   };
-  
+
   useEffect(() => {
     const fetchBlogs = async () => {
       const blogList = await getAllBlogs();
@@ -62,7 +65,7 @@ const MainContainer = () => {
     };
     fetchBlogs();
   }, []);
-  
+
   const handleBlogCreate = async (blogFormData) => {
     const newBlog = await postBlog(blogFormData);
     setRecipes((prevState) => [...prevState, newBlog]);
@@ -85,7 +88,6 @@ const MainContainer = () => {
     history.push("/blogs");
   };
 
-
   return (
     <Switch>
       <Route path="/recipes/:id/edit">
@@ -97,12 +99,23 @@ const MainContainer = () => {
       <Route path="/recipes/:id">
         <RecipeDetail
           recipes={recipes}
-          handleRecipeUpdate={handleRecipeUpdate}
           handleRecipeDelete={handleRecipeDelete}
         />
       </Route>
       <Route path="/recipes">
         <Recipes recipes={recipes} />
+      </Route>
+      <Route path="blogs/:id/edit">
+        <BlogEdit blogs={blogs} handleBlogUpdate={handleBlogUpdate} />
+      </Route>
+      <Route path="/blogs/new">
+        <BlogCreate handleBlogCreate={handleBlogCreate} />
+      </Route>
+      <Route path="/blogs/:id">
+        <BlogDetail blogs={blogs} handleBlogDelete={handleBlogDelete} />
+      </Route>
+      <Route path="/blogs">
+        <Blogs blogs={blogs}/>
       </Route>
       <Route path="/">
         <Home />
