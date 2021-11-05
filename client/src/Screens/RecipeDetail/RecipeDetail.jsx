@@ -28,7 +28,9 @@ const RecipeDetail = (props) => {
         <p>{recipe?.ingredients}</p>
         <p>{recipe?.directions}</p>
         <button onClick={() => handleRecipeDelete(recipe.id)}>delete</button>
-        <button onClick={() => handleRecipeUpdate(recipe.id)}>update</button>
+        <Link to={`/recipes/${id}/edit`}>
+          <button>edit</button>
+        </Link>
       </div>
     </>
   );
