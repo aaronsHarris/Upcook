@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import './blogs.css'
 const Blogs = (props) => {
   const { blogs } = props;
   return (
