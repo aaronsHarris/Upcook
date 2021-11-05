@@ -5,14 +5,15 @@ const Recipes = (props) => {
   const { recipes } = props;
 
   return (
-    <div>
+    <div  className="recipeContainer">
       <h3>Recipes</h3>
       <Link to="/recipes/new">add</Link>
-      <div className="recipeContainer">
+      <div>
+        <div className="grid-space">
         {recipes.map((recipe) => (
           <Link to={`/recipes/${recipe.id}`}>
-            <div className="recipeCard" key={recipe.id}>
-              <p>{recipe.name}</p>
+            <div className="card" key={recipe.id}>
+              {/* <h1>{recipe.name}</h1> */}
               <img
                 className="recipeImage"
                 src={recipe.image_url}
@@ -21,6 +22,7 @@ const Recipes = (props) => {
             </div>
           </Link>
         ))}
+          </div>
       </div>
     </div>
   );

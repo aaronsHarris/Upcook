@@ -7,12 +7,7 @@ import {
   postRecipe,
   putRecipe,
 } from "../Services/recipes";
-import {
-  getAllBlogs,
-  postBlog,
-  putBlog,
-  deleteBlog,
-} from "../Services/blogs";
+import { getAllBlogs, postBlog, putBlog, deleteBlog } from "../Services/blogs";
 import Recipes from "../Screens/Recipes/Recipes";
 import RecipeCreate from "../Screens/RecipeCreate/RecipeCreate";
 import RecipeEdit from "../Screens/RecipeEdit/RecipeEdit";
@@ -92,11 +87,11 @@ const MainContainer = () => {
       <Route path="/recipes/:id/edit">
         <RecipeEdit recipes={recipes} handleRecipeUpdate={handleRecipeUpdate} />
       </Route>
+      <Route path="/blogs/:id/edit">
+        <BlogEdit blogs={blogs} handleBlogUpdate={handleBlogUpdate} />
+      </Route>
       <Route path="/blogs/new">
         <BlogCreate handleBlogCreate={handleBlogCreate} />
-      </Route>
-      <Route path="blogs/:id/edit">
-        <BlogEdit blogs={blogs} handleBlogUpdate={handleBlogUpdate} />
       </Route>
       <Route path="/recipes/new">
         <RecipeCreate handleRecipeCreate={handleRecipeCreate} />
@@ -114,7 +109,7 @@ const MainContainer = () => {
         <BlogDetail blogs={blogs} handleBlogDelete={handleBlogDelete} />
       </Route>
       <Route path="/blogs">
-        <Blogs blogs={blogs}/>
+        <Blogs blogs={blogs} />
       </Route>
       <Route path="/">
         <Home />
