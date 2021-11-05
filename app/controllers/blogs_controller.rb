@@ -17,7 +17,7 @@ class BlogsController < ApplicationController
   # POST /blogs
   def create
     @blog = Blog.new(blog_params)
-    @blog.user = current_user
+    @blog.user = @current_user
     if @blog.save
       render json: @blog, status: :created, location: @blog
     else
