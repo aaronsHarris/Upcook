@@ -9,7 +9,6 @@ import {
 } from "../Services/recipes";
 import {
   getAllBlogs,
-  getOneBlog,
   postBlog,
   putBlog,
   deleteBlog,
@@ -93,6 +92,12 @@ const MainContainer = () => {
       <Route path="/recipes/:id/edit">
         <RecipeEdit recipes={recipes} handleRecipeUpdate={handleRecipeUpdate} />
       </Route>
+      <Route path="/blogs/new">
+        <BlogCreate handleBlogCreate={handleBlogCreate} />
+      </Route>
+      <Route path="blogs/:id/edit">
+        <BlogEdit blogs={blogs} handleBlogUpdate={handleBlogUpdate} />
+      </Route>
       <Route path="/recipes/new">
         <RecipeCreate handleRecipeCreate={handleRecipeCreate} />
       </Route>
@@ -104,12 +109,6 @@ const MainContainer = () => {
       </Route>
       <Route path="/recipes">
         <Recipes recipes={recipes} />
-      </Route>
-      <Route path="blogs/:id/edit">
-        <BlogEdit blogs={blogs} handleBlogUpdate={handleBlogUpdate} />
-      </Route>
-      <Route path="/blogs/new">
-        <BlogCreate handleBlogCreate={handleBlogCreate} />
       </Route>
       <Route path="/blogs/:id">
         <BlogDetail blogs={blogs} handleBlogDelete={handleBlogDelete} />

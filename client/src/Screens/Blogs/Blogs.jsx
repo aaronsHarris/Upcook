@@ -5,7 +5,7 @@ const Blogs = (props) => {
   return (
     <div>
       <h3>Blogs</h3>
-      <Link to="/blogss/new">add</Link>
+      <Link to="/blogs/new">add</Link>
       <div>
         {blogs.map((blog) => (
           <Link to={`/blogs/${blog.id}`}>
