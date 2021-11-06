@@ -1,41 +1,24 @@
 import { Link } from "react-router-dom";
-import "./recipes.css";
+import RecipeCard from "../../components/recipeCard/RecipeCard";
 
 const Recipes = (props) => {
   const { recipes } = props;
 
   return (
-    
-    <div className="recipe-wrapper">
-      <div className="recipe-header">
-        <div>
-      <h3>Recipes</h3>
-
+    <div className="flex flex-col justify-center content-center min-h-screen max-w-full mx-auto">
+      <div className="grid grid-cols-3 justify-center content-center gap-4 text-center">
+        <div className="grid col-start-2">
+          <h3>Recipes</h3>
         </div>
-      <Link to="/recipes/new">
-      <button className="button-77">add</button>
-        </Link>
-        </div>
-    <div  className="recipeContainer">
-        {recipes.map((recipe) => (
-          <Link to={`/recipes/${recipe.id}`}>
-            <div className="card" key={recipe.id}>
-              {/* <h1>{recipe.name}</h1> */}
-              <div className="image-container">
-              <img
-                className="recipeImage"
-                src={recipe.image_url}
-                alt="recipeItem"
-              />
-              </div>
-            </div>
+        <div classname="grid col-start-3">
+          <Link to="/recipes/new">
+            <button className="">add</button>
           </Link>
-        ))}
-         
-      
-    </div>
+        </div>
       </div>
-      );
+      <RecipeCard recipes={recipes} />
+    </div>
+  );
 };
 
 export default Recipes;
