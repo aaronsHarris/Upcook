@@ -5,18 +5,23 @@ const Recipes = (props) => {
   const { recipes } = props;
 
   return (
-    <div className="flex flex-col justify-center content-center min-h-screen max-w-full mx-auto">
-      <div className="grid grid-cols-3 justify-center content-center gap-4 text-center">
+    <div className="flex flex-col  min-h-screen max-w-full">
+      <div className="grid grid-cols-3 justify-center content-center gap-4 text-center my-10">
         <div className="grid col-start-2">
-          <h3>Recipes</h3>
+          <div className="text-5xl">Recipes</div> 
         </div>
         <div classname="grid col-start-3">
           <Link to="/recipes/new">
-            <button className="">add</button>
+            <button className="text-2xl">add</button>
           </Link>
         </div>
       </div>
-      <RecipeCard recipes={recipes} />
+      <div className="flex">
+      {recipes.map((recipe) => (
+          
+          <RecipeCard recipe={recipe} />
+        ))}
+      </div>
     </div>
   );
 };
