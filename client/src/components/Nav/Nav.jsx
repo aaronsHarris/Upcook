@@ -35,7 +35,24 @@ const Nav = (props) => {
               </li>
             );
           })}
-        </ul>
+          </ul>
+          <div>
+          {currentUser ? (
+          <div>
+            <p>{currentUser.username}</p>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        ) : (
+          <Link to='/login'>Login/Register</Link>
+        )}
+        <hr />
+        {currentUser && (
+          <div>
+            <Link to='/foods'>Foods</Link>
+            <Link to='/flavors'>Flavors</Link>
+          </div>
+        )}
+          </div>
       </nav>
         {children}
         </IconContext.Provider>
