@@ -45,13 +45,7 @@ const Nav = (props) => {
         ) : (
           <Link to='/login'>Login/Register</Link>
         )}
-        <hr />
-        {currentUser && (
-          <div>
-            <Link to='/foods'>Foods</Link>
-            <Link to='/flavors'>Flavors</Link>
-          </div>
-        )}
+        
           </div>
       </nav>
         {children}

@@ -81,7 +81,7 @@ const SignIn = (props) => {
               <div class="text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500"></div>
               <button
                 class="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none"
-                type="button"
+                
               >
                 Login
               </button>

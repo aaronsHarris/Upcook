@@ -51,9 +51,9 @@ const SignUp = (props) => {
           <div class="w-full mt-4">
               <input
                 class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800  dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                type="email"
+                type="text"
                 placeholder="Username"
-                aria-label="Email Address"
+                
                 name="username"
                 value={username}
                 onChange={handleChange}
@@ -62,7 +62,7 @@ const SignUp = (props) => {
             <div class="w-full mt-4">
               <input
                 class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800  dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                type="email"
+                type="text"
                 placeholder="Email Address"
                 aria-label="Email Address"
                 name="email"
@@ -86,10 +86,9 @@ const SignUp = (props) => {
             <div class="flex items-center justify-between mt-4">
               <div class="text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500"></div>
               <button
-                class="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none"
-                type="button"
+                className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none"   
               >
-                Login
+                SignUp
               </button>
             </div>
           </div>
