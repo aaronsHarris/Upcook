@@ -20,7 +20,7 @@ const RecipeDetail = (props) => {
     <div className="flex flex-col min-h-screen justify-center">
       <div className="grid grid-cols-3 my-10 text-center">
         <Link to="/recipes">
-          <button class="flex items-center p-4  transition ease-in duration-200 uppercase rounded-full hover:bg-green-400 hover:text-white border-2 border-gray-900 focus:outline-none">
+          <button className="flex items-center p-4  transition ease-in duration-200 uppercase rounded-full hover:bg-green-400 hover:text-white border-2 border-gray-900 focus:outline-none">
             <FaIcons.FaArrowLeft />
           </button>
         </Link>

@@ -3,34 +3,20 @@ import { Link } from "react-router-dom";
 const RecipeCard = (props) => {
   const { recipe } = props;
   return (
-    <div className="max-w-xs overflow-hidden bg-white rounded-lg shadow-xl m-4 ">
-      <Link to={`/recipes/${recipe.id}`}>
-        <img
-          class="object-cover w-full h-56"
-          src={recipe.image_url}
-          alt="avatar"
-        />
-        <div className="py-5 text-center">
-          <div className="block text-2xl font-bold text-gray-800 dark:text-white">
+    
+    <Link to={`/recipes/${recipe.id}`} className="grid grid-col relative w-full h-64 rounded-lg overflow-hidden shadow-lg hover:-translate-y-5 transform transition duration-300 ease-in-out" key={recipe.id}>
+      
+      <div className="relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center">
+        <h3 className="text-center">
+          <div className="text-black text-2xl  text-center" href="#">
             {recipe.name}
           </div>
-        </div>
-      </Link>
-    </div>
+        </h3>
+      </div>
+      <img src={recipe.image_url} alt={recipe.id} />
+    </Link>
   );
 };
 
 export default RecipeCard;
 
-//     <Link to={`/recipes/${recipe.id}`}>
-//     <div classname="">
-//     <div>{recipe.name}</div>
-//     </div>
-//     <div className="w-48">
-//     <img
-//       className=" overflow-hidden"
-//       src={recipe.image_url}
-//       alt="recipeItem"
-//     />
-//   </div>
-// </Link>

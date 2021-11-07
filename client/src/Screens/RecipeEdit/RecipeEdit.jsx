@@ -57,7 +57,7 @@ const RecipeEdit = (props) => {
       <div className="hidden lg:block w-6/12 h-full">
         <img
           src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636308988/upcook/istockphoto-480379752-612x612_j7felv.jpg"
-          className="w-full h-full object-cover  shadow-lg "
+          className="w-full h-full object-cover  shadow-lg " alt="recipe"
         />
       </div>
       <Link to='/recipes'>
@@ -73,16 +73,16 @@ const RecipeEdit = (props) => {
         >
           <img
             src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636248110/upcook/0d7b260309e34d43b8fce143e4c99b6b_1_kaghfg.png"
-            className="h-24 block mx-auto"
+            className="h-24 block mx-auto" alt="recipe image" alt="upcook"
           />
           <div className="mt-10">
             <h2 className="text-3xl font-bold text-gray-800">Update your Recipe</h2>
             
           </div>
           <div className="mt-12">
-            <div class="w-full mt-4">
+            <div className="w-full mt-4">
               <input
-                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800  dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800  dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                 type="text"
                 placeholder="Name"
                 name="name"
@@ -91,9 +91,9 @@ const RecipeEdit = (props) => {
               />
             </div>
 
-            <div class="w-full mt-4">
+            <div classNameName="w-full mt-4">
               <input
-                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
+                classNameName="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"
                 type="text"
                 placeholder="Time"
@@ -102,9 +102,9 @@ const RecipeEdit = (props) => {
                 onChange={handleChange}
               />
             </div>
-            <div class="w-full mt-4">
+            <div classNameName="w-full mt-4">
               <input
-                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
+                classNameName="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"
                 type="text"
                 placeholder="Difficulty"
@@ -113,18 +113,9 @@ const RecipeEdit = (props) => {
                 onChange={handleChange}
               />
             </div>
-            <div class="w-full mt-4">
-              {/* <input
-                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
-                focus:outline-none focus:ring"
-                type="text"
-                placeholder="Description"
-                name="description"
-                value={description}
-                onChange={handleChange}
-              /> */}
+            <div className="w-full mt-4">
               <textarea
-                class="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
+                className="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"
                 rows="4"
                 placeholder="Description"
@@ -133,9 +124,9 @@ const RecipeEdit = (props) => {
                 onChange={handleChange}
               ></textarea>
             </div>
-            <div class="w-full mt-4">
+            <div className="w-full mt-4">
               <input
-                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
+                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"
                 type="text"
                 placeholder="Image"
@@ -144,18 +135,9 @@ const RecipeEdit = (props) => {
                 onChange={handleChange}
               />
             </div>
-            <div class="w-full mt-4">
-              {/* <input
-                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
-                focus:outline-none focus:ring"
-                type="text"
-                placeholder="Ingredients"
-                name="ingredients"
-                value={ingredients}
-                onChange={handleChange}
-              /> */}
+            <div className="w-full mt-4">
               <textarea
-                class="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
+                className="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"
                 rows="3"
                 type="text"
@@ -165,18 +147,9 @@ const RecipeEdit = (props) => {
                 onChange={handleChange}
               ></textarea>
             </div>
-            <div class="w-full mt-4">
-              {/* <input
-                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
-                focus:outline-none focus:ring"
-                type="text"
-                placeholder="Directions"
-                name="directions"
-                value={directions}
-                onChange={handleChange}
-              /> */}
+            <div className="w-full mt-4">
               <textarea
-                class="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
+                className="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"
                 rows="3"
                 type="text"
@@ -187,9 +160,9 @@ const RecipeEdit = (props) => {
               ></textarea>
             </div>
 
-            <div class="flex items-center justify-between mt-4">
-              <div class="text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500"></div>
-              <button class="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none">
+            <div className="flex items-center justify-between mt-4">
+              <div className="text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500"></div>
+              <button className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none">
                 Update
               </button>
             </div>
