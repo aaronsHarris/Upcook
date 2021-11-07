@@ -66,7 +66,7 @@ const BlogCreate = (props) => {
                 onChange={handleChange}
               />
             </div>
-            
+
             <div class="w-full mt-4">
               <textarea
                 class="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
