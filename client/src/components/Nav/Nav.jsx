@@ -37,15 +37,7 @@ const Nav = (props) => {
           })}
           </ul>
           <div>
-          {currentUser ? (
-          <div>
-            <p>{currentUser.username}</p>
-            <button onClick={handleLogout}>Logout</button>
-          </div>
-        ) : (
-          <Link to='/login'>Login/Register</Link>
-        )}
-        
+
           </div>
       </nav>
         {children}
