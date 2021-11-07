@@ -29,7 +29,7 @@ const SignIn = (props) => {
       <div className="hidden lg:block w-6/12 h-full">
         <img
           src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817216/upcook/istockphoto-1134470382-170667a_y9j17w.jpg"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover  shadow-lg "
         />
       </div>
       <div className="w-full lg:w-7/12 overflow-scroll py-24 relative">
@@ -42,7 +42,7 @@ const SignIn = (props) => {
         >
           <img
             src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636248110/upcook/0d7b260309e34d43b8fce143e4c99b6b_1_kaghfg.png"
-            className="h-24 block mx-auto shadow-xl11"
+            className="h-24 block mx-auto"
           />
           <div className="mt-10">
             <h2 className="text-3xl font-bold text-gray-800">Welcome back</h2>
@@ -67,7 +67,8 @@ const SignIn = (props) => {
 
             <div class="w-full mt-4">
               <input
-                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800  dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+                class="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
+                focus:outline-none focus:ring"
                 type="password"
                 placeholder="Password"
                 aria-label="Password"
