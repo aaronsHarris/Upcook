@@ -19,15 +19,15 @@ const BlogDetail = (props) => {
   return (
     <>
       <div className="flex justify-center">
-      <div class="fixed h-80">
+      <div className="fixed h-80">
         <img alt="content" class=" h-full w-full" src={blog?.image_url}/>
         </div>
       </div>
-<main class=" mt-80 relative container mx-auto bg-white px-4">
-  <article class="max-w-prose mx-auto py-8">
-          <h1 class="text-2xl font-bold">{blog?.title}</h1>
-          <h2 class="mt-2 text-lg text-gray-500">{blog?.tagline}</h2>
-          <p class="mt-6">{blog?.content}</p>
+<main className=" mt-80 relative container mx-auto bg-white px-4">
+  <article className="max-w-prose mx-auto py-8">
+          <h1 className="text-2xl font-bold">{blog?.title}</h1>
+          <h2 className="mt-2 text-lg text-gray-500">{blog?.tagline}</h2>
+          <p className="mt-6">{blog?.content}</p>
   </article>
 </main>
     </>
