@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import * as AiIcons from "react-icons/ai";
+import { Link } from "react-router-dom";
 const BlogCreate = (props) => {
   const [blogFormData, setblogFormData] = useState({
     title: "",
@@ -26,7 +27,10 @@ const BlogCreate = (props) => {
           className="w-full h-full object-cover  shadow-lg " alt="cooking"
         />
       </div>
-      <div className="w-full lg:w-7/12 overflow-scroll py-24 relative">
+          <div className="w-full lg:w-7/12 overflow-scroll py-24 relative">
+          <Link to='/blogs'>
+        <div className="close-button"><AiIcons.AiOutlineClose /></div>
+        </Link>
         <form
           className="w-5/6 sm:w-1/2 mx-auto text-center"
           onSubmit={(e) => {
@@ -91,8 +95,8 @@ const BlogCreate = (props) => {
             </div>
             <div className="flex items-center justify-between mt-4">
               <div className="text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500"></div>
-              <button className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none">
-                Login
+              <button className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-black rounded hover:bg-green focus:outline-none">
+                Create
               </button>
             </div>
           </div>
