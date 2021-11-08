@@ -37,7 +37,7 @@ const RecipeCreate = (props) => {
       
         <img
           src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817125/upcook/istockphoto-478776508-612x612_stm0yw.jpg"
-          className="w-full h-full object-cover  shadow-lg "
+          className="w-full h-full object-cover  shadow-lg " alt="upcook"
         />
       </div>
       <div className="w-full lg:w-7/12 overflow-scroll py-24 relative">
@@ -52,7 +52,7 @@ const RecipeCreate = (props) => {
           }}
         >
           <img
-            src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636248110/upcook/0d7b260309e34d43b8fce143e4c99b6b_1_kaghfg.png"
+            src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636248110/upcook/0d7b260309e34d43b8fce143e4c99b6b_1_kaghfg.png" alt="upcook"
             className="h-24 block mx-auto"
           />
           <div className="mt-10">
@@ -94,15 +94,7 @@ const RecipeCreate = (props) => {
               />
             </div>
             <div className="w-full mt-4">
-              {/* <input
-                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
-                focus:outline-none focus:ring"
-                type="text"
-                placeholder="Description"
-                name="description"
-                value={description}
-                onChange={handleChange}
-              /> */}
+              
               <textarea
                 className="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"
@@ -125,15 +117,7 @@ const RecipeCreate = (props) => {
               />
             </div>
             <div className="w-full mt-4">
-              {/* <input
-                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
-                focus:outline-none focus:ring"
-                type="text"
-                placeholder="Ingredients"
-                name="ingredients"
-                value={ingredients}
-                onChange={handleChange}
-              /> */}
+              
               <textarea
                 className="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"
@@ -146,15 +130,7 @@ const RecipeCreate = (props) => {
               ></textarea>
             </div>
             <div className="w-full mt-4">
-              {/* <input
-                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
-                focus:outline-none focus:ring"
-                type="text"
-                placeholder="Directions"
-                name="directions"
-                value={directions}
-                onChange={handleChange}
-              /> */}
+             
               <textarea
                 className="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
                 focus:outline-none focus:ring"

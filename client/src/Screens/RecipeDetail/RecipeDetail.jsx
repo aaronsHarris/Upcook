@@ -8,7 +8,7 @@ import * as TiIcons from "react-icons/ti";
 const RecipeDetail = (props) => {
   const [recipe, setRecipe] = useState(null);
   const { id } = useParams();
-  const { handleRecipeDelete, handleRecipeUpdate } = props;
+  const { handleRecipeDelete } = props;
 
   useEffect(() => {
     const fetchSingleRecipe = async () => {
@@ -21,49 +21,49 @@ const RecipeDetail = (props) => {
   return (
     <div className="flex flex-col justify-center text-center">
       <Link to="/recipes" className="flex">
-           <button className="menu-bars">
+           <button className="back-icon">
              <FaIcons.FaArrowLeft />
            </button>
          </Link>
     <div className="flex justify-center">
       <div className=" h-80">
-        <img alt="content" class=" h-full w-full" src={recipe?.image_url}/>
+        <img alt="content" className=" h-full w-full" src={recipe?.image_url}/>
         </div>
     </div>
       <div className="text-5xl mt-10 mb-4">{recipe?.name}</div>
       <div className="text-2xl">{recipe?.description}</div>
-<div class="my-10 mx-auto justify-center bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg">
-    <div class="border-t border-gray-200 ">
+<div className="my-10 mx-auto justify-center bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg">
+    <div className="border-t border-gray-200 ">
         <dl>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
+            <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">
                     Time
                 </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                     {recipe?.time}
                 </dd>
             </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
+            <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">
                     Difficulty
                 </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                     {recipe?.difficulty}
                 </dd>
             </div>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
+            <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">
                     Ingredients
                 </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 {recipe?.ingredients}
                 </dd>
             </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
+            <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt className="text-sm font-medium text-gray-500">
                     Directions
                 </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                     {recipe?.directions}
                 </dd>
             </div>

@@ -6,7 +6,7 @@ const Home = () => {
             <div className="absolute w-screen h-screen flex">
       <div className="hidden lg:block w-6/12 h-full">
         <img
-          src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817105/upcook/PlatitHero_pjkpvu.jpg"
+          src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817105/upcook/PlatitHero_pjkpvu.jpg" alt="upcook"
           className="w-full h-full object-cover  shadow-lg "
         />
       </div>
@@ -18,7 +18,7 @@ const Home = () => {
                     <p className="mt-4 text-gray-600 lg:text-2xl">Learn from the pros</p>
                     <p className="mt-4 text-gray-600 lg:text-2xl">Cook it and serve</p>
                     <div className="mt-6">
-                        <Link to="/signup" className="block px-3 py-2 font-semibold text-center text-white transition-colors duration-200 transform bg-green-500 rounded-md lg:inline hover:bg-green-400">Get Started</Link>
+                        <Link to="/signup" className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-black rounded hover:bg-green focus:outline-none">Get Started</Link>
                     </div>
                 </div>  
         </div>

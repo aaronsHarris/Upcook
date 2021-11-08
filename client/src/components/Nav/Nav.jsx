@@ -37,8 +37,15 @@ const Nav = (props) => {
           })}
           </ul>
           <div>
-
           </div>
+          {currentUser ? (
+          <div className="flex flex-col justify-end my-10 mr-24 w-0">
+            <p className="text-2xl mb-10 font-bold"> {currentUser.username}</p>
+            <button onClick={handleLogout}>SignOut</button>
+          </div>
+        ) : (
+  <div></div>
+  )}
       </nav>
         {children}
         </IconContext.Provider>

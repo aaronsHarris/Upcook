@@ -22,7 +22,7 @@ const SignUp = (props) => {
       <div className="hidden lg:block w-6/12 h-full">
         <img
           src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636250957/upcook/istockphoto-678860402-612x612_r9etzr.jpg"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover" alt="signup"
         />
       </div>
       <div className="w-full lg:w-7/12 overflow-scroll py-24 relative">
@@ -35,7 +35,7 @@ const SignUp = (props) => {
         >
           <img
             src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636248110/upcook/0d7b260309e34d43b8fce143e4c99b6b_1_kaghfg.png"
-            className="h-24 block mx-auto shadow-xl11"
+            className="h-24 block mx-auto shadow-xl11" alt="signup"
           />
           <div className="mt-10">
             <h2 className="text-3xl font-bold text-gray-800 mb-8">Get started with us today!</h2>

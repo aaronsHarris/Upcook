@@ -42,7 +42,7 @@ const BlogEdit = (props) => {
     <div className="absolute w-screen h-screen flex">
       <div className="hidden lg:block w-6/12 h-full">
         <img
-          src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636306489/upcook/istockphoto-1199380263-612x612_dwrib4.jpg"
+          src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636306489/upcook/istockphoto-1199380263-612x612_dwrib4.jpg" alt="upcook"
           className="w-full h-full object-cover  shadow-lg "
         />
       </div>

@@ -11,7 +11,6 @@ import {
   removeToken,
   verifyUser,
 } from './Services/auth';
-import Home from "./Screens/Home/Home";
 
 
 function App() {

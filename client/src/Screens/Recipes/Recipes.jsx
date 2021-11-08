@@ -16,9 +16,9 @@ const Recipes = (props) => {
           </button>
            </Link>
         <section className="mt-6 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
-        {recipes.map((recipe) => (
+        {recipes.map((recipe, index) => (
                 
-                <RecipeCard recipe={recipe} />
+                <RecipeCard recipe={recipe} key={index} />
               ))}
         </section>
     </div>

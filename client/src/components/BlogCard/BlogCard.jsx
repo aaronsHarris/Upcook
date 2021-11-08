@@ -4,15 +4,15 @@ const BlogCard = (props) => {
   const { blog } = props;
   return (
     <Link to={`/blogs/${blog.id}`}>
-      <div class="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden hover:-translate-y-5 transform transition duration-300 ease-in-out">
-        <div class="w-1/3 bg-cover bg-landscape">
+      <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden hover:-translate-y-5 transform transition duration-300 ease-in-out">
+        <div className="w-1/3 bg-cover bg-landscape">
           <img src={blog.image_url} alt="" />
       </div>
-      <div class="w-2/3 p-4">
-          <h1 class="text-gray-900 font-bold text-xl">
+      <div className="w-2/3 p-4">
+          <h1 className="text-gray-900 font-bold text-xl">
               {blog.title}
           </h1>
-          <p class="mt-2 text-gray-600 text-sm">
+          <p className="mt-2 text-gray-600 text-sm">
               {blog.tagline}
           </p>
           

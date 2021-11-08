@@ -73,7 +73,7 @@ const RecipeEdit = (props) => {
         >
           <img
             src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636248110/upcook/0d7b260309e34d43b8fce143e4c99b6b_1_kaghfg.png"
-            className="h-24 block mx-auto" alt="recipe image" alt="upcook"
+            className="h-24 block mx-auto" alt="upcook"
           />
           <div className="mt-10">
             <h2 className="text-3xl font-bold text-gray-800">Update your Recipe</h2>

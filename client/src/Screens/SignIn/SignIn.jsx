@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
 
 
 const SignIn = (props) => {
@@ -25,7 +25,7 @@ const SignIn = (props) => {
       <div className="hidden lg:block w-6/12 h-full">
         <img
           src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817216/upcook/istockphoto-1134470382-170667a_y9j17w.jpg"
-          className="w-full h-full object-cover  shadow-lg "
+          className="w-full h-full object-cover  shadow-lg " alt="signin"
         />
       </div>
       <div className="w-full lg:w-7/12 overflow-scroll py-24 relative">
@@ -37,7 +37,7 @@ const SignIn = (props) => {
           }}
         >
           <img
-            src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636248110/upcook/0d7b260309e34d43b8fce143e4c99b6b_1_kaghfg.png"
+            src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1636248110/upcook/0d7b260309e34d43b8fce143e4c99b6b_1_kaghfg.png" alt="signin"
             className="h-24 block mx-auto"
           />
           <div className="mt-10">
