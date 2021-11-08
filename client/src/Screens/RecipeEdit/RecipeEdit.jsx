@@ -90,11 +90,9 @@ const RecipeEdit = (props) => {
                 onChange={handleChange}
               />
             </div>
-
-            <div classNameName="w-full mt-4">
+            <div className="w-full mt-4">
               <input
-                classNameName="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
-                focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800  dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                 type="text"
                 placeholder="Time"
                 name="time"
@@ -102,10 +100,9 @@ const RecipeEdit = (props) => {
                 onChange={handleChange}
               />
             </div>
-            <div classNameName="w-full mt-4">
+            <div className="w-full mt-4">
               <input
-                classNameName="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500
-                focus:outline-none focus:ring"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800  dark:placeholder-gray-400 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                 type="text"
                 placeholder="Difficulty"
                 name="difficulty"
@@ -113,6 +110,7 @@ const RecipeEdit = (props) => {
                 onChange={handleChange}
               />
             </div>
+            
             <div className="w-full mt-4">
               <textarea
                 className="form-textarea block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-500 bg-white border rounded-md dark:bg-gray-800 focus:border-blue-500

@@ -16,7 +16,7 @@ User.destroy_all
 puts "#{User.count} users created"
 
 
-   @pbj = Recipe.create!(name: 'pbj', time: '5 mins', difficulty: 'very easy', description: 'this food is good', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037541/upcook/pbj_klyut1.jpg', user: @admin)
+   @pbj = Recipe.create!(name: 'pbj', time: '5 mins', difficulty: 'very easy', description: 'this food is good', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037541/upcook/pbj_klyut1.jpg', user: @admin, ingredients: '10z peanut butter, 1oz jelly,2 slices bread', directions: 'toast bread, spread peanut butter on both sides, add jelly in the middle and spread to sides')
 
    @eggs = Recipe.create!(name: 'scrambled eggs', time: '5 mins', difficulty: 'easy', description: 'these are eggs', image_url: 'https://res.cloudinary.com/dbdrox2p9/image/upload/v1636037735/upcook/scrambled-eggs-1_plvtz5.jpg',  user: @admin)
 

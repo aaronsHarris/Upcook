@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import * as AiIcons from "react-icons/ai";
+
 const RecipeCreate = (props) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -32,12 +34,16 @@ const RecipeCreate = (props) => {
   return (
     <div className="absolute w-screen h-screen flex">
       <div className="hidden lg:block w-6/12 h-full">
+      
         <img
           src="https://res.cloudinary.com/dbdrox2p9/image/upload/v1635817125/upcook/istockphoto-478776508-612x612_stm0yw.jpg"
           className="w-full h-full object-cover  shadow-lg "
         />
       </div>
       <div className="w-full lg:w-7/12 overflow-scroll py-24 relative">
+      <Link to='/recipes'>
+        <div className="close-button"><AiIcons.AiOutlineClose /></div>
+        </Link>
         <form
           className="w-5/6 sm:w-1/2 mx-auto text-center"
           onSubmit={(e) => {
@@ -163,8 +169,8 @@ const RecipeCreate = (props) => {
 
             <div className="flex items-center justify-between mt-4">
               <div className="text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500"></div>
-              <button className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none">
-                Login
+              <button className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-black rounded hover:bg-green focus:outline-none">
+                Create
               </button>
             </div>
           </div>

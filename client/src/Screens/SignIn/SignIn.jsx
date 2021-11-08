@@ -77,7 +77,7 @@ const SignIn = (props) => {
             <div className="flex items-center justify-between mt-4">
               <div className="text-sm text-gray-600 dark:text-gray-200 hover:text-gray-500"></div>
               <button
-                className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none"
+                className="px-4 py-2 leading-5 text-white transition-colors duration-200 transform bg-black rounded hover:bg-green focus:outline-none"
                 
               >
                 Login

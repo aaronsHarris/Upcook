@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import RecipeCard from "../../components/recipeCard/RecipeCard";
-
+import * as GrIcons from "react-icons/gr";
 const Recipes = (props) => {
   const { recipes } = props;
 
@@ -9,10 +9,12 @@ const Recipes = (props) => {
     <div>
         <div className="flex flex-col text-4xl font-extrabold text-gray-900 text-center ">
           <div className="">Recipes</div>
-        <Link to="/recipes/new">
-             <button className=" text-2xl self-end">add</button>
-           </Link>
         </div>
+        <Link to="/recipes/new">
+          <button className=" text-2xl self-end">
+            <GrIcons.GrAdd />
+          </button>
+           </Link>
         <section className="mt-6 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
         {recipes.map((recipe) => (
                 
